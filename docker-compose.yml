@@ -1,0 +1,11 @@
+version: "3"
+services:
+    fastapi-app:
+        build: .
+        container_name: fastapi_crud_container
+        image: fastapi_crud_image
+        restart: always
+        volumes:
+            - ./app:/workspace/app
+        ports: 
+            - "80:80"
